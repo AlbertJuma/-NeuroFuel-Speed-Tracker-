@@ -3,29 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NeuroFuel Speed Tracker - A running app for athletes">
+  <meta name="description" content="NeuroFuel Speed Tracker - A real-time running tracker for athletes">
   <title>NeuroFuel Speed Tracker</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-y5uJ9nf4C46MA9lK6KX2e+JNc4FfB1C0Y4zwH9nWkWkU3sL2Z4e5qfL9F7e1OZQO" crossorigin=""/>
 </head>
 <body>
   <header>
-    <h1>NeuroFuel Speed Tracker</h1>
+    <h1>🏃 NeuroFuel Speed Tracker</h1>
   </header>
   <main>
-    <section id="tracker-panel">
+    <section id="stats">
       <div class="stat">
         <h2>Distance</h2>
         <p id="distance">0.00 km</p>
         <button id="unit-toggle">Switch to meters</button>
       </div>
       <div class="stat">
-        <h2>Current Speed</h2>
-        <p id="current-speed">0.00 km/h</p>
+        <h2>Speed</h2>
+        <p id="speed">0.00 km/h</p>
       </div>
       <div class="stat">
-        <h2>Total Time</h2>
-        <p id="total-time">00:00</p>
+        <h2>Time</h2>
+        <p id="time">00:00</p>
       </div>
     </section>
     <section id="map-container">
@@ -34,13 +34,13 @@
     <section id="controls">
       <button id="start-btn">Start</button>
       <button id="stop-btn" disabled>Stop</button>
-      <button id="save-session-btn" disabled>Save Session</button>
-      <textarea id="session-notes" placeholder="Add notes about this session..."></textarea>
+      <button id="save-btn" disabled>Save</button>
+      <textarea id="notes" placeholder="Add session notes..."></textarea>
     </section>
     <section id="history">
       <h2>Session History</h2>
-      <ul id="session-history"></ul>
-      <button id="clear-history-btn">Clear History</button>
+      <ul id="history-list"></ul>
+      <button id="clear-btn">Clear History</button>
     </section>
   </main>
   <footer>
